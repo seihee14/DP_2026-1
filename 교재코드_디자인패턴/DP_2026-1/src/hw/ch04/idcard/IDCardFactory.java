@@ -1,8 +1,7 @@
-package ch04.A2.idcard;
+package hw.ch04.idcard;
 
-
-import ch04.A2.framework.Factory;
-import ch04.A2.framework.Product;
+import hw.ch04.framework.Factory;
+import hw.ch04.framework.Product;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,9 +9,10 @@ import java.util.Map;
  public class IDCardFactory extends Factory {
      private int serial = 100;
     private Map<Integer, String> database = new HashMap<>();
+    private String baseDate;
  
      protected synchronized Product createProduct(String owner) {
-         return new IDCard(owner, serial++);
+        return new IDCard(owner, serial++, baseDate);
      }
  
      @Override
@@ -25,4 +25,7 @@ import java.util.Map;
     public Map<Integer, String> getDatabase() {
         return database;
     }
+    public IDCardFactory(String baseDate) {
+    this.baseDate = baseDate;
+}
  }

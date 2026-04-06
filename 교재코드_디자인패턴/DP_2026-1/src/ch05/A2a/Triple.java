@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Triple {
+    //클래스 로드 시 실행
     private static Map<String,Triple> map = new HashMap<>();
     static {
         String[] names = { "ALPHA", "BETA", "GAMMA" };
