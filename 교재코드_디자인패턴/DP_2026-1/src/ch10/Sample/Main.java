@@ -1,7 +1,7 @@
 package ch10.Sample;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { // args : 명령행 인자를 받는 변수(문자열로 받음)
         if (args.length != 2) {
             System.out.println("Usage: java Main randomseed1 randomseed2");
             System.out.println("Example: java Main 314 15");
